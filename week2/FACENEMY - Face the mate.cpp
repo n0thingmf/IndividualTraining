@@ -1,3 +1,16 @@
+/**
+ * @author Mijail Poccohuanca
+ * @tag geometry, vectors, dot product
+ * @idea
+ *      - we can use the dot product to calculate the angle between two vectors a,b as cos(angle)=a.b/(|a|*|b|)
+ *      - we can compare the angles of the directios to know who watch te other first
+ *      - to use only integer operations we can use the fact that the angles are less or equal that 180 degrees and
+ *        that a < b if and only if cos(a) > cos(b) , a < 180 deg , b<180 deg
+ *      - then if cos(a) = u.v/(|u|*|v|) and cos(b) = w.x/(|w|*|x|) -> u.v/(|u|*|v|) > w.x/(|w|*|x|)
+ *        -> (u.v)*|w|*|x| > (w.x)*|u|*|v|
+ *      - to compare this values using integer operations we can use the squared values, but first taking care of the signs
+ *  
+ */ 
 #include<bits/stdc++.h>
 #define pb push_back
 #define ll long long

@@ -1,3 +1,14 @@
+/**
+ * @author Mijail Poccohuanca
+ * @tag data structures, sparse table, binary lifting like
+ * @idea
+ *      - we can precompute the jumps using a sparse table st[i][j] that gives the index of jumping from index i 1<<j times.
+ *      - now we can know the final index of any number of jumps starting form any index in O(logn)
+ *      - now we can solve the problem using binary search over the number of jumps
+ *      - we to the same for the reverse direcction acording to the starting and final point
+ *  
+ * @complexity O(n*log(n) + q*log(n)^2)
+ */
 #include<bits/stdc++.h>
 #define pb push_back
 #define ll long long

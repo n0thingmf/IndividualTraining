@@ -1,3 +1,17 @@
+/**
+ * @name Atcoder 011 ARC 059
+ * @author Mijail Poccohuanca
+ * @tags counting, dp
+ * @idea:
+ *  - Let n be the lenght of the string, and m the number of operations(keys) that will be pressed
+ *  - First notice that the answer does not depend on the string itself, but only depends of the size of the string n
+ *  - This means that the answer must be the same for the 2^n possible binary strings of lenght n
+ *  - Now if we define the number of ways to press m keys that gives as a result a string of lenght n as dp[n][m]
+ *    this will be equal to 2^n times the answer to the problem.
+ *  - We can calculate dp[n][m] with the recursion formula: dp[n][m]=2*dp[n-1][m-1]+dp[n+1][m-1] and dp[0][m]=dp[1][m-1]+dp[0][m-1]
+ *    with dp[0][0]=1
+ *  - Finally our answer will be dp[n][m]/2^n modulo 1e9+7
+ */
 #include<bits/stdc++.h>
 #define pb push_back
 #define ll long long

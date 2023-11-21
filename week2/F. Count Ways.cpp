@@ -1,3 +1,17 @@
+/**
+ * @author Mijail Poccohuanca
+ * @tag dynamic programming
+ * @idea
+ *      - we define dp[i] as the number of ways to go from (1,1) to (p[i].x,p[i].y) but without passing over blocked cells except
+ *        the finnish cell.
+ *      - we can count the number of ways to go from (1,1) to an arbitrary point (n,m) with the formula comb(n+m-2,n-1)
+ *      - we can use the inclusion - exclusion principle to update dp[i]
+ *      - we initialize dp[i] = comb(p[i].x+p[i].y-2,p[i].x-1)
+ *      - for any p[j] that is contained in the rectangle formed by (1,1) and (p[i].x,p[j].y) we update dp[i]:
+ *          dp[i] -= dp[j]*comb(p[i].x+p[i].y-p[j].x-p[j].y,p[i].x-p[j].x)
+ *  
+ * @complexity O(k^2)
+ */ 
 #include<bits/stdc++.h>
 #define pb push_back
 #define ll long long
