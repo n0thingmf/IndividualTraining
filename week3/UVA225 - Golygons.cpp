@@ -1,3 +1,12 @@
+/**
+ * @author Mijail Poccohuanca
+ * @tag backtracking
+ * @idea
+ *      - just backtrack over all posibilites and check if it returns to (0,0) at the end
+ *      - keep in mind that you can cross paths but you can't return to a visited vertex (this is'nt clear in the problem statement)
+ *  
+ * @complexity O(2^n)
+ */
 #include<bits/stdc++.h>
 #define pb push_back
 #define ll long long

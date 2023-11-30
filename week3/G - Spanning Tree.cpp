@@ -1,3 +1,14 @@
+/**
+ * @author Mijail Poccohuanca
+ * @tag all spanning trees, Kirchoff theorem
+ * @idea
+ *      - we run a dfs over all unvisited vertices considering A[i][j] == 1 as an edge to find the connected components assining them an id, if we find a cycle(the connected component it's not a tree) we print 0 and end the program.
+ *      - we build a new adjacency matrix with the ids of the connected components (like compressing a connected component as a vertex), the new graph can have multiedges, a spanning tree over this graph will be a tree in the original graph
+ *      - then we build a laplacian matrix of the new adjacency matrix
+ *      - finally we use the Kirchoff theorem to count the number of spanning trees over a multigraph calculating the determinant of the laplacian matrix
+ *      - we use gaussian elimination modulo 10^9+7 to calculate the determinant
+ * @complexity O(N^3)
+ */
 #include<bits/stdc++.h>
 #define pb push_back
 #define ll long long

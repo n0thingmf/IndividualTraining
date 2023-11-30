@@ -1,3 +1,14 @@
+/**
+ * @author Mijail Poccohuanca
+ * @tag brute force
+ * @idea
+ *      - If we have 3 numbers with the same maximun bit(most significative bit): (a,b,c) then a > b^c
+ *      - We check for all i if a[i-1] > a[i]^a[i+1], if it exist we print 1 as our answer.
+ *      - If we don't find an answer, then it will be a maximun of 2 numbers for each maximun bit wich gives a total of 60 numbers maximun
+ *      - We brute force over the 60 numbers, the operations can be expresed as xor's of a subarray.
+ *      - We fix a pair of consecutive elements in the array then brute forces over all the left subarrays and the right subarrays in O(N^3) with n <= 60
+ * @complexity O(N)
+ */
 #include<bits/stdc++.h>
 #define pb push_back
 #define ll long long

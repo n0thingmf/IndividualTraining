@@ -1,3 +1,12 @@
+/**
+ * @author Mijail Poccohuanca
+ * @tag pingeonhole principle, brute force
+ * @idea
+ *      - the coordinates are less than 10^5 then the manhatan distance of two points will be in the range [0,2*10^5]
+ *      - for n points there are n*(n-1)/2 posible pair of points, then if this value is greater than 2*10^5+1(number of possible values of the manhatan distance) by the pigeonhole principle there will be at least two pair of points with equal manhatan distance, in this case we print YES and finish the program;
+ *      - if n*(n-1)/2 < 2*10^5+1 we just brute force over all pairs
+ * @complexity O(N^2) with N^2 < 2*10^5 + 1
+ */
 #include<bits/stdc++.h>
 #define pb push_back
 #define ll long long

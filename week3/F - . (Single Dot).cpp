@@ -1,3 +1,14 @@
+/**
+ * @author Mijail Poccohuanca
+ * @tag bfs
+ * @idea
+ *      - you can compress the coordinates, then the points generate a grid with 3*10^3 maximun side
+ *      - run a bfs over the center grid calculating the cover area
+ *      - each square grid will have a different area depending of the compressed vertexs that defines the grid.
+ *      - if the bfs ends up outside of the grid the cover area will be infinity
+ *  
+ * @complexity O(N*M)
+ */
 #include<bits/stdc++.h>
 #define pb push_back
 #define ll long long

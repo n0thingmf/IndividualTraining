@@ -1,3 +1,15 @@
+/**
+ * @author Mijail Poccohuanca
+ * @tag greedy
+ * @idea
+ *      - we call left values if L[i] >= R[i], and right values if L[i] < R[i]
+ *      - Exchange argument: if a left value on the right (array order) of a right value we can exchage them without worsing the total value of the array.
+ *      - Then is better to have the left values on the left of the right values, then we can solve each group independently
+ *      - we can solve the right group with the same algorithm as the left group, then without loss of generality the array only have one group with L[i] >= R[i] for all i
+ *      - we define w[i] = L[i]-R[i] then we sort in descending  order the values as pairs of {k[i],w[i]}
+ *      - we iterate over the sorted pairs and assing them to te rightmost available space(pos) while pos <= k[i]
+ * @complexity O(NlogN)
+ */
 #include<bits/stdc++.h>
 #define pb push_back
 #define ll long long
